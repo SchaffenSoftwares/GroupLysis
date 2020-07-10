@@ -1,0 +1,63 @@
+#preview {
+	color:black;
+	padding: 0 20px 100px;
+	position: relative;
+	text-align: center;
+	min-height: 680px;
+	max-width: 600px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#preview .preview_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+#preview .preview_wrapper > div {
+	text-align: left;
+	padding-left: 40px;
+}
+
+.rtl #preview .preview_wrapper > div {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 40px;
+}
+
+#preview .preview_wrapper > img {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+
+
+#preview h1 {
+	font-size: 58px;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: inline-block;
+	position: relative;
+	padding-left: 70px;
+	position: relative;
+	text-shadow: 0 1px 10px rgba(0,0,0,0.2);
+}
+
+#preview p {
+	text-shadow: none;
+	letter-spacing: 0.015em;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+#preview p strong {
+	font-weight: 900;
+}
+
+#preview p.how_to {
+	margin: 5px 0 0;
+}
+
