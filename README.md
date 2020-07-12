@@ -27,3 +27,9 @@ groupname-date_activity.png
 groupname-person_activity.png
 groupname-time_activity.png
 groupname-word_frequency.png
+
+# php file- upload.php
+
+# home page- index.html
+
+
