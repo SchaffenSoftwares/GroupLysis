@@ -1,0 +1,47 @@
+body {
+  background-color: #363636;
+  font-family: Kalam;
+  color: #fff;
+}
+.head {
+  background-color: #184d47;
+  height: 100px;
+  width: 100%;
+  margin-top : 0px;
+  margin-bottom :50px;
+  text-align: center;
+  color: white;
+  padding: 0;
+  margin: 0 auto;
+}
+.home {
+ align-content: flex-end;
+ color: black;
+
+}
+.steps {
+  font-size : 20px;
+
+}
+.image {
+  height : 350px;
+  width : 300px;
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 30%;
+
+}
+.image2 {
+  height : 350px;
+  width : 400px;
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 30%;
+}
+.happy {
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+}

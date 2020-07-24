@@ -1,0 +1,224 @@
+body {
+  background-color: #363636;
+}
+article {
+  color: #fff;
+}
+:root {
+  --mainColor: #fff;
+}
+.submit {
+  height : 20px;
+  width : 200px;
+}
+
+}
+
+a {
+  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+hr.fancy-line {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0));
+    box-shadow: 0px -2px 4px rgba(136,136,136,0.75);
+}
+
+
+#arrow {
+	height : 50px;
+	width : 50px;
+	vertical-align: middle;
+        display: inline-block;
+}
+#preview {
+	color:black;
+	padding: 0 20px 100px;
+	position: relative;
+	text-align: center;
+	min-height: 680px;
+	max-width: 600px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#preview .preview_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+#preview .preview_wrapper > div {
+	text-align: left;
+	padding-left: 40px;
+}
+
+.rtl #preview .preview_wrapper > div {
+	text-align: right;
+	padding-left: 0;
+	padding-right: 40px;
+}
+
+#preview .preview_wrapper > img {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+
+
+#preview h1 {
+	font-size: 58px;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	display: inline-block;
+	position: relative;
+	padding-left: 70px;
+	position: relative;
+	text-shadow: 0 1px 10px rgba(0,0,0,0.2);
+}
+
+#preview p {
+	text-shadow: none;
+	letter-spacing: 0.015em;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+#preview p strong {
+	font-weight: 900;
+}
+
+#preview p.how_to {
+	margin: 5px 0 0;
+}
+.button1 {
+	background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.button1:hover {opacity: 1}
+@font-face {
+    font-family:'HeydingsCommonIconsRegular';
+    src: url('http://ianfarb.com/random/heydings_icons-webfont.eot');
+    src: url('http://ianfarb.com/random/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://ianfarb.com/random/heydings_icons-webfont.woff') format('woff'),
+         url('http://ianfarb.com/random/heydings_icons-webfont.ttf') format('truetype'),
+         url('http://ianfarb.com/random/heydings_icons-webfont.svg#HeydingsCommonIconsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {    margin: 0;
+  padding: 0;}
+
+
+.bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: .25s;
+  pointer-events: none;
+}
+
+li
+{  list-style:none;
+   }
+
+li a
+    { display:block;
+      float:left;
+      width:20%;
+      padding:25px 0;
+      text-align:center;
+      font-family: 'HeydingsCommonIconsRegular', Helvetida Neue, sans-serif;
+      font-weight:700;
+      letter-spacing:1px;
+      font-size:40px;
+      color:#fff;
+      background:#ccc;
+      text-decoration:none;
+      text-transform:uppercase;
+      text-shadow:2px 2px 0 rgba(0,0,0,.25);
+      transition:.25s;}
+
+li a:hover  {
+      margin:-10px 0 0 0;
+}
+
+.menu
+    {  width:500px;
+       margin:60px auto 0 auto;
+       border-radius:10px;
+       overflow:hidden;}
+
+.menu li:first-child a {  background:#ffca6d !important;}
+.menu li:nth-child(2) a {  background:#ff6d6d !important;}
+.menu li:nth-child(3) a {  background:#6dffb9 !important;}
+.menu li:nth-child(4) a {  background:#6dcaff !important;}
+.menu li:nth-child(5) a {  background:#beef00 !important;}
+.menu li:nth-child(6) a {  background:#9df9ef !important;}
+.menu li:nth-child(7) a {  background:#a0d2eb !important;}
+.menu li:nth-child(8) a {  background:#fff685 !important;}
+.menu li:nth-child(9) a {  background:#59ce8f !important;}
+.menu li:nth-child(10) a {  background:#f9c5bd !important;}
+
+.menu li:first-child:hover ~ .bg {
+  background: #ffca6d;
+
+}
+.menu li:nth-child(2):hover ~ .bg {
+  background: #ff6d6d;
+}
+.menu li:nth-child(3):hover ~ .bg {
+  background: #6dffb9;
+}
+.menu li:nth-child(4):hover ~ .bg {
+  background: #6dcaff;
+}
+.menu li:nth-child(5):hover ~ .bg {
+  background: #beef00;
+}
+.menu li:nth-child(6):hover ~ .bg {
+  background: #9df9ef;
+}
+.menu li:nth-child(7):hover ~ .bg {
+  background: #a0d2eb;
+}
+.menu li:nth-child(8):hover ~ .bg {
+  background: #fff685;
+}
+.menu li:nth-child(9):hover ~ .bg {
+  background: #59ce8f;
+}
+.menu li:nth-child(10):hover ~ .bg {
+  background: #f9c5bd;
+}
