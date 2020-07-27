@@ -1,4 +1,5 @@
 <?php
+
 // del zip file
 
 unlink("group.zip"); 
@@ -11,11 +12,14 @@ foreach($files as $file){
 
 
 // to get the data of the uploaded file
+
 $target_dir = "";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
 $name1= substr( basename($_FILES["fileToUpload"]["name"]),0,-4);
+
 
 // Check if file already exists
 if (file_exists($target_file)) {
@@ -41,7 +45,11 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+
 //    echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.".'<br';
+
+    echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.".'<br';
+
   } else {
     echo "Sorry, there was an error uploading your file.".'<br>';
   }
@@ -145,3 +153,32 @@ if($zip -> open($nameArchive, ZipArchive:: CREATE)=== TRUE){
     </div>
   </body>
 </html>
+$command= escapeshellcmd("python analyze.py ".basename($_FILES["fileToUpload"]["name"]));
+$output= shell_exec($command);
+echo $output;
+//displaying the images
+$imagesDirectory = "output/";
+ 
+if(is_dir($imagesDirectory))
+{
+	$opendirectory = opendir($imagesDirectory);
+  
+    while (($image = readdir($opendirectory)) !== false)
+	{
+		if(($image == '.') || ($image == '..'))
+		{
+			continue;
+		}
+		
+		$imgFileType = pathinfo($image,PATHINFO_EXTENSION);
+		
+		if(($imgFileType == 'jpg') || ($imgFileType == 'png'))
+		{
+			echo "<img src='output/".$image."' width='800px' height='600px'> ";
+		}
+    }
+	
+    closedir($opendirectory);
+ 
+}
+?>
