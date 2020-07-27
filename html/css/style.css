@@ -1,0 +1,39 @@
+body{
+  font-family: cursive;
+  background-color: #363636;
+  
+}
+img{
+  height: 500px;
+  width: 500px;
+  padding: 10px;
+  filter: brightness(80%);
+  transition: 1s;
+}
+h1{
+  text-align: center;
+  color: #01d28e;
+  margin-bottom: 50px;
+}
+.gallery{
+  margin: 10px,50px;
+}
+
+.body{
+  text-align: center;
+}
+
+  .gallery img:hover{
+    filter: brightness(100%);
+    transform: scale3d(1.1);
+    transform: scale(1.1);
+  }
+  .img2{
+    height: 200px;
+    width: 200px;
+    }
+.down{
+  border-radius: 50px;
+  background-color: black;
+
+}
