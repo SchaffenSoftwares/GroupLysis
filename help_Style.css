@@ -1,7 +1,6 @@
 body {
-  background-color: #363636;
-  font-family: Kalam;
-  color: #fff;
+  background-color: #ffffff;
+  font-family: Sylfaen;
 }
 .head {
   background-color: #184d47;
@@ -10,7 +9,7 @@ body {
   margin-top : 0px;
   margin-bottom :50px;
   text-align: center;
-  color: white;
+  color: black;
   padding: 0;
   margin: 0 auto;
 }
@@ -44,4 +43,11 @@ body {
   font-size: 20px;
   font-weight: bolder;
   font-style: italic;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+img.expanded {
+    max-width: none;
 }

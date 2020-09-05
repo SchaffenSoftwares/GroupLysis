@@ -1,11 +1,12 @@
 body {
-  background-color: #363636;
+  background-color: #ffffff;
+  font-family: Sylfaen;
 }
 article {
-  color: #fff;
+  color: rgb(2, 2, 2);
 }
 :root {
-  --mainColor: #fff;
+  --mainColor:  rgb(2, 2, 2);
 }
 .submit {
   height : 20px;
@@ -41,14 +42,12 @@ hr.fancy-line {
     box-shadow: 0px -2px 4px rgba(136,136,136,0.75);
 }
 
-
 #arrow {
 	height : 50px;
 	width : 50px;
 	vertical-align: middle;
         display: inline-block;
 }
-
 #preview {
 	color:black;
 	padding: 0 20px 100px;
@@ -112,7 +111,7 @@ hr.fancy-line {
 	margin: 5px 0 0;
 }
 .button1 {
-	background-color: #f4511e;
+	background-color: orangered;
   border: none;
   color: white;
   padding: 16px 32px;
@@ -120,7 +119,7 @@ hr.fancy-line {
   font-size: 16px;
   margin: 4px 2px;
   opacity: 0.6;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 .button1:hover {opacity: 1}
 @font-face {
@@ -222,4 +221,89 @@ li a:hover  {
 }
 .menu li:nth-child(10):hover ~ .bg {
   background: #f9c5bd;
+}
+
+body {padding: 0px;}
+
+$separator-size: 5px;
+$separator-border-style: solid;
+$separator-border-color: #071c21;
+$separator-space-top: 25px;
+$separator-space-bottom: 80px;
+
+.separator {
+  margin-top: $separator-space-top;
+  margin-bottom: $separator-space-bottom;
+  border: 0;
+
+}
+
+.separator--line {
+  border: 5px;
+  border-bottom: $separator-size $separator-border-style $separator-border-color;
+
+  width: 5px;
+  animation: separator-width 1s ease-out forwards;
+}
+@keyframes separator-width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@mixin dot {
+  $dot-size: 7px;
+  content: "";
+  background-color: $separator-border-color;
+  display: block;
+  height: $dot-size;
+  width: $dot-size;
+  border-radius: 50%;
+}
+.separator--dots {
+  overflow: visible;
+  border: 0;
+  @include dot();
+  position: relative;
+  &:before {
+     @include dot();
+     position: absolute;
+     left: -32px;
+     animation: dot-move-left 1s ease-out forwards;
+  }
+    &:after {
+     @include dot();
+     position: absolute;
+     left: 32px;
+     animation: dot-move-right 1s ease-out forwards;
+  }
+}
+
+@keyframes dot-move-right {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 32px;
+  }
+}
+@keyframes dot-move-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -32px;
+  }
+}
+
+
+.separator--dotter {
+  border: 0;
+  border-bottom: $separator-size dotted $separator-border-color;
+
+  width: 0;
+  animation: separator-width 1.5s ease-out forwards;
 }
